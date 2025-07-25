@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 summary: { pt: "Uma API robusta e documentada para facilitar o acesso da população a serviços públicos essenciais por meio da geolocalização e da integração com plataformas confiáveis.", en: "A robust and well-documented API to make public services more accessible through geolocation and integration with reliable platforms." },
                 challenges: { pt: "Padronizar dados de APIs externas, implementar autenticação com múltiplos provedores e integrar de forma fluida a Google Maps Platform foram os maiores desafios.", en: "Standardizing data from external APIs, implementing multi-provider authentication, and seamlessly integrating the Google Maps Platform were the biggest challenges." },
                 learnings: { pt: "Aprofundei conhecimentos em integrações REST, autenticação segura, documentação com Swagger, arquitetura de microsserviços e modelagem com MongoDB.", en: "I deepened my knowledge in REST integrations, secure authentication, Swagger documentation, microservices architecture, and MongoDB modeling." },
-                githubLink: "https://github.com/Coehlo-Gab-Dev/Desafio-05-Back-End",
+                githubLink: "https://github.com/Coelho-G-Dev/Desafio-05-Back-End",
                 images: ["assets/Busca Sus-Swagger.png", "assets/code-controler.png", "assets/code-placespng.png"]
             },
             {
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "summary": { "pt": "Este projeto consiste em uma API robusta, documentada e resiliente, focada em facilitar o acesso da população maranhense a serviços públicos essenciais através da geolocalização.", "en": "This project consists of a robust, documented, and resilient API focused on facilitating access for the population of Maranhão to essential public services through geolocation." },
                 "challenges": { "pt": "Os principais desafios incluem a implementação de uma arquitetura resiliente que funcione offline, a padronização de dados de diferentes fontes (IBGE, Google) e a garantia da segurança das rotas autenticadas.", "en": "The main challenges include implementing a resilient architecture that works offline, standardizing data from different sources (IBGE, Google), and ensuring the security of authenticated routes." },
                 "learnings": { "pt": "Aprofundei conhecimentos em arquitetura de APIs RESTful com Node.js, modelagem de dados com Mongoose, estratégias de fallback para serviços externos, e autenticação segura com JWT.", "en": "I deepened my knowledge in RESTful API architecture with Node.js, data modeling with Mongoose, fallback strategies for external services, and secure authentication with JWT." },
-                "githubLink": "https://github.com/Coehlo-Gab-Dev/Guia-Maranhao",
+                "githubLink": "https://github.com/Coelho-G-Dev/Guia-Maranhao",
                 "images": ["assets/code-guia01.png", "assets/guia-02.png"]
             }
         ]
