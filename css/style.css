@@ -277,3 +277,68 @@ a { color: var(--text-color); text-decoration: none; }
     .footer-container { flex-direction: column; text-align: center; }
     .footer-socials { justify-content: center; }
 }
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+  }
+  h2 {
+    font-size: clamp(1.4rem, 4vw, 2.5rem);
+  }
+  p,
+  .nav-link,
+  .btn,
+  .modal-close-btn {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  }
+  
+  /* Prevenção de quebra de layout com textos longos */
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  a,
+  li,
+  span {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  
+  /* Breakpoint extra para telas pequenas (mobile menor que 480px) */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    .logo {
+      font-size: 1rem;
+      padding: 0.4rem 1rem;
+    }
+    .home-text p {
+      font-size: 1rem;
+    }
+    .home-image img {
+      width: 220px;
+      height: 220px;
+    }
+    .btn {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+    .modal-header,
+    .modal-body {
+      padding: 1rem;
+    }
+    #modal-project-title {
+      font-size: 1.5rem;
+    }
+    .nav-link {
+      font-size: 1rem;
+      padding: 0.4rem 0.6rem;
+    }
+    .footer-col {
+      min-width: 100%;
+    }
+  }
