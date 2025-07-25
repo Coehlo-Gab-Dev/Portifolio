@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-const translations = {
+    const translations = {
         en: {
             pageTitle: "Gabriel Coelho - Backend Developer",
             navAbout: "About", navSkills: "Skills", navProjects: "Projects", navContact: "Contact", navExperience: "Experience",
@@ -70,55 +70,24 @@ const translations = {
                 challenges: { pt: "Padronizar dados de APIs externas, implementar autenticação com múltiplos provedores e integrar de forma fluida a Google Maps Platform foram os maiores desafios.", en: "Standardizing data from external APIs, implementing multi-provider authentication, and seamlessly integrating the Google Maps Platform were the biggest challenges." },
                 learnings: { pt: "Aprofundei conhecimentos em integrações REST, autenticação segura, documentação com Swagger, arquitetura de microsserviços e modelagem com MongoDB.", en: "I deepened my knowledge in REST integrations, secure authentication, Swagger documentation, microservices architecture, and MongoDB modeling." },
                 githubLink: "https://github.com/Coehlo-Gab-Dev/Desafio-05-Back-End",
-                images: ["/assets/Busca Sus-Swagger.png", "/assets/code-controler.png", "/assets/code-placespng.png"]
+                images: ["assets/Busca Sus-Swagger.png", "assets/code-controler.png", "assets/code-placespng.png"]
             },
             {
                 "id": 2,
-                "title": {
-                    "pt": "Guia Maranhão – API de Serviços Públicos",
-                    "en": "Guia Maranhão – Public Services API"
-                },
-                "status": {
-                    "pt": "Em desenvolvimento",
-                    "en": "In development"
-                },
-                "description": {
-                    "pt": "Projeto Full-Stack para centralizar e facilitar o acesso a informações sobre serviços públicos no estado do Maranhão. A fase atual foca no desenvolvimento de uma API RESTful robusta, integrando dados do IBGE e a Google Maps Platform.",
-                    "en": "Full-Stack project to centralize and facilitate access to information about public services in the state of Maranhão. The current phase focuses on developing a robust RESTful API, integrating data from IBGE and the Google Maps Platform."
-                },
+                "title": { "pt": "Guia Maranhão – API de Serviços Públicos", "en": "Guia Maranhão – Public Services API" },
+                "status": { "pt": "Em desenvolvimento", "en": "In development" },
+                "description": { "pt": "Projeto Full-Stack para centralizar e facilitar o acesso a informações sobre serviços públicos no estado do Maranhão. A fase atual foca no desenvolvimento de uma API RESTful robusta, integrando dados do IBGE e a Google Maps Platform.", "en": "Full-Stack project to centralize and facilitate access to information about public services in the state of Maranhão. The current phase focuses on developing a robust RESTful API, integrating data from IBGE and the Google Maps Platform." },
                 "technologies": ["Node.js", "Express", "MongoDB", "Mongoose", "JWT", "Google Maps API", "Swagger"],
-                "features": {
-                    "pt": [
-                    "Integração com a API de localidades do IBGE",
-                    "Geolocalização e busca de locais com Google Places API",
-                    "Autenticação de usuários com JSON Web Tokens (JWT)",
-                    "Arquitetura resiliente com fallback para dados locais"
-                    ],
-                    "en": [
-                    "Integration with IBGE's locations API",
-                    "Geolocation and location search with Google Places API",
-                    "User authentication with JSON Web Tokens (JWT)",
-                    "Resilient architecture with local data fallback"
-                    ]
+                "features": { 
+                    "pt": ["Integração com a API de localidades do IBGE", "Geolocalização e busca de locais com Google Places API", "Autenticação de usuários com JSON Web Tokens (JWT)", "Arquitetura resiliente com fallback para dados locais"],
+                    "en": ["Integration with IBGE's locations API", "Geolocation and location search with Google Places API", "User authentication with JSON Web Tokens (JWT)", "Resilient architecture with local data fallback"]
                 },
-                "summary": {
-                    "pt": "Este projeto consiste em uma API robusta, documentada e resiliente, focada em facilitar o acesso da população maranhense a serviços públicos essenciais através da geolocalização.",
-                    "en": "This project consists of a robust, documented, and resilient API focused on facilitating access for the population of Maranhão to essential public services through geolocation."
-                },
-                "challenges": {
-                    "pt": "Os principais desafios incluem a implementação de uma arquitetura resiliente que funcione offline, a padronização de dados de diferentes fontes (IBGE, Google) e a garantia da segurança das rotas autenticadas.",
-                    "en": "The main challenges include implementing a resilient architecture that works offline, standardizing data from different sources (IBGE, Google), and ensuring the security of authenticated routes."
-                },
-                "learnings": {
-                    "pt": "Aprofundei conhecimentos em arquitetura de APIs RESTful com Node.js, modelagem de dados com Mongoose, estratégias de fallback para serviços externos, e autenticação segura com JWT.",
-                    "en": "I deepened my knowledge in RESTful API architecture with Node.js, data modeling with Mongoose, fallback strategies for external services, and secure authentication with JWT."
-                },
+                "summary": { "pt": "Este projeto consiste em uma API robusta, documentada e resiliente, focada em facilitar o acesso da população maranhense a serviços públicos essenciais através da geolocalização.", "en": "This project consists of a robust, documented, and resilient API focused on facilitating access for the population of Maranhão to essential public services through geolocation." },
+                "challenges": { "pt": "Os principais desafios incluem a implementação de uma arquitetura resiliente que funcione offline, a padronização de dados de diferentes fontes (IBGE, Google) e a garantia da segurança das rotas autenticadas.", "en": "The main challenges include implementing a resilient architecture that works offline, standardizing data from different sources (IBGE, Google), and ensuring the security of authenticated routes." },
+                "learnings": { "pt": "Aprofundei conhecimentos em arquitetura de APIs RESTful com Node.js, modelagem de dados com Mongoose, estratégias de fallback para serviços externos, e autenticação segura com JWT.", "en": "I deepened my knowledge in RESTful API architecture with Node.js, data modeling with Mongoose, fallback strategies for external services, and secure authentication with JWT." },
                 "githubLink": "https://github.com/Coehlo-Gab-Dev/Guia-Maranhao",
-                "images": [
-                    "/assets/code-guia01.png",
-                    "/assets/guia-02.png"
-                ]
-                }              
+                "images": ["assets/code-guia01.png", "assets/guia-02.png"]
+            }
         ]
     };
 
@@ -126,6 +95,7 @@ const translations = {
         currentLang: 'pt',
         init() {
             this.langToggleButton = document.getElementById('lang-toggle');
+            this.langToggleMobileButton = document.getElementById('lang-toggle-mobile'); 
             this.loadLanguage();
             this.addEventListeners();
         },
@@ -137,9 +107,11 @@ const translations = {
             this.currentLang = lang;
             localStorage.setItem('language', lang);
             document.documentElement.lang = lang;
-            if (this.langToggleButton) {
-                this.langToggleButton.querySelector('span').textContent = lang.toUpperCase();
-            }
+            
+            const langText = lang.toUpperCase();
+            if (this.langToggleButton) this.langToggleButton.querySelector('span').textContent = langText;
+            if (this.langToggleMobileButton) this.langToggleMobileButton.querySelector('span').textContent = langText; 
+            
             this.applyTranslations();
         },
         applyTranslations() {
@@ -154,12 +126,12 @@ const translations = {
             Animations.initTypingEffect();
         },
         addEventListeners() {
-            if (this.langToggleButton) {
-                this.langToggleButton.addEventListener('click', () => {
-                    const newLang = this.currentLang === 'pt' ? 'en' : 'pt';
-                    this.setLanguage(newLang);
-                });
-            }
+            const toggleLang = () => {
+                const newLang = this.currentLang === 'pt' ? 'en' : 'pt';
+                this.setLanguage(newLang);
+            };
+            if (this.langToggleButton) this.langToggleButton.addEventListener('click', toggleLang);
+            if (this.langToggleMobileButton) this.langToggleMobileButton.addEventListener('click', toggleLang); 
         }
     };
 
@@ -173,37 +145,63 @@ const translations = {
             const hamburger = document.querySelector('.hamburger');
             const navMenu = document.querySelector('.nav-menu');
             const navLinks = document.querySelectorAll('.nav-link');
+            const body = document.body;
             if (!hamburger || !navMenu) return;
+
+            const closeMenu = () => {
+                navMenu.classList.remove('active');
+                hamburger.querySelector('i').classList.add('fa-bars');
+                hamburger.querySelector('i').classList.remove('fa-times');
+                body.classList.remove('no-scroll');
+            };
+
+            const openMenu = () => {
+                navMenu.classList.add('active');
+                hamburger.querySelector('i').classList.remove('fa-bars');
+                hamburger.querySelector('i').classList.add('fa-times');
+                body.classList.add('no-scroll');
+            };
+
             hamburger.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-                hamburger.querySelector('i').classList.toggle('fa-bars');
-                hamburger.querySelector('i').classList.toggle('fa-times');
+                if (navMenu.classList.contains('active')) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
             });
+
             navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (navMenu.classList.contains('active')) {
-                        navMenu.classList.remove('active');
-                        hamburger.querySelector('i').classList.add('fa-bars');
-                        hamburger.querySelector('i').classList.remove('fa-times');
-                    }
-                });
+                link.addEventListener('click', closeMenu);
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    closeMenu();
+                }
             });
         },
         handleThemeToggle() {
             const themeToggleButton = document.getElementById('theme-toggle');
-            if (!themeToggleButton) return;
+            const themeToggleMobileButton = document.getElementById('theme-toggle-mobile'); 
+
             const applyTheme = (theme) => {
                 document.body.classList.toggle('light-theme', theme === 'light');
-                themeToggleButton.querySelector('i').classList.toggle('fa-sun', theme === 'dark');
-                themeToggleButton.querySelector('i').classList.toggle('fa-moon', theme === 'light');
+                const iconClass = theme === 'light' ? 'fa-moon' : 'fa-sun';
+                if (themeToggleButton) themeToggleButton.querySelector('i').className = `fas ${iconClass}`;
+                if (themeToggleMobileButton) themeToggleMobileButton.querySelector('i').className = `fas ${iconClass}`; 
             };
-            const savedTheme = localStorage.getItem('theme') || 'dark';
-            applyTheme(savedTheme);
-            themeToggleButton.addEventListener('click', () => {
+            
+            const toggleTheme = () => {
                 const newTheme = document.body.classList.contains('light-theme') ? 'dark' : 'light';
                 localStorage.setItem('theme', newTheme);
                 applyTheme(newTheme);
-            });
+            };
+
+            if (themeToggleButton) themeToggleButton.addEventListener('click', toggleTheme);
+            if (themeToggleMobileButton) themeToggleMobileButton.addEventListener('click', toggleTheme); 
+            
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            applyTheme(savedTheme);
         },
         handleActiveLinkOnScroll() {
             const sections = document.querySelectorAll('.section');
@@ -308,7 +306,6 @@ const translations = {
                 `;
                 this.projectsGrid.appendChild(card);
             });
-
             Animations.initScrollReveal();
         },
         openModal(projectId) {
@@ -316,7 +313,6 @@ const translations = {
             if (!project) return;
             this.currentProject = project;
             const lang = LanguageSwitcher.currentLang;
-            
             this.modal.querySelector('#modal-project-title').textContent = project.title[lang];
             const statusBadge = this.modal.querySelector('#modal-project-status');
             statusBadge.textContent = project.status[lang];
@@ -332,7 +328,6 @@ const translations = {
                 <li><strong>Status:</strong> <span class="status-badge ${statusBadge.className.includes('concluido') ? 'concluido' : 'em-desenvolvimento'}">${project.status[lang]}</span></li>
                 <li><strong>Repositório:</strong> <a href="${project.githubLink}" target="_blank">GitHub <i class="fas fa-external-link-alt"></i></a></li>
             `;
-            
             this.currentImageIndex = 0;
             this.updateGallery();
             this.modal.classList.add('active');
@@ -367,7 +362,7 @@ const translations = {
                 } else if (e.target.matches('.gallery-thumbnails img')) {
                     this.currentImageIndex = parseInt(e.target.dataset.index);
                 } else {
-                    return; 
+                    return;
                 }
                 this.updateGallery();
             });
